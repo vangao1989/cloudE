@@ -1,0 +1,18 @@
+server:
+  port: 8888
+
+spring:
+  application:
+    name: cloud-config-server
+  cloud:
+      config:
+        server:
+          git:
+            uri: https://github.com/vangao1989/cloudE.git
+            searchPaths: cloudE-config-repo
+            lable: master
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/

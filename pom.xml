@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.cloudE</groupId>
+	<artifactId>cloudE-parent</artifactId>
+	<version>1.0.0</version>
+	<packaging>pom</packaging>
+	<name>cloudE-parent</name>
+	<description>cloudE-parent</description>
+	
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>1.4.5.RELEASE</version>
+	</parent>
+
+	<properties>
+		<java.version>1.8</java.version>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+		<cloudE-mapper-version>0.0.6</cloudE-mapper-version>
+		<cloudE-core-version>0.1.3</cloudE-core-version>
+		<cloudE-channel-api-version>0.0.4</cloudE-channel-api-version>
+
+		<docker.image.prefix>vangao1989</docker.image.prefix>
+	</properties>
+
+
+
+
+	<modules>
+		<module>cloudE-core</module>
+		<module>cloudE-mapper</module>
+		<module>cloudE-eureka-server</module>
+		<module>cloudE-admin-server</module>
+		<module>cloudE-config-server</module>
+		<module>cloudE-hystrix-dashboard-server</module>
+		<module>cloudE-zipkin-server</module>
+		<module>cloudE-gateway-server</module>
+		<module>cloudE-turbine-server</module>
+		<module>cloudE-channelDocking-provider</module>
+		<module>cloudE-user-provider</module>
+		<module>cloudE-channelDocking-api</module>
+ 	 </modules>
+
+
+
+	<distributionManagement>  
+        <repository>  
+            <id>nexus-releases</id>  
+            <name>maimaijiao</name>  
+            <url>http://192.168.1.99:8081/nexus/content/repositories/mmj</url>  
+        </repository>  
+   		<snapshotRepository>   
+            <id>nexus-snapshots</id>   
+            <name>Snapshots</name>   
+            <url>http://192.168.1.99:8081/nexus/content/repositories/snapshots</url>   
+        </snapshotRepository>
+    </distributionManagement>
+
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.springframework.cloud</groupId>
+				<artifactId>spring-cloud-starter-parent</artifactId>
+				<version>Camden.SR6</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+
+			<plugin>
+				<groupId>com.spotify</groupId>
+				<artifactId>docker-maven-plugin</artifactId>
+				<version>0.4.11</version>
+				<configuration>
+					<imageName>${docker.image.prefix}/${project.artifactId}</imageName>
+					<dockerDirectory>src/main/docker</dockerDirectory>
+					<resources>
+						<resource>
+							<targetPath>/</targetPath>
+							<directory>${project.build.directory}</directory>
+							<include>${project.build.finalName}.jar</include>
+						</resource>
+					</resources>
+				</configuration>
+			</plugin>
+		</plugins>
+		<defaultGoal>compile</defaultGoal>
+	</build>
+
+</project>
