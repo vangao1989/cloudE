@@ -10,4 +10,7 @@ cloudE
 ├── cloudE-eureka-server -- 服务发现
 ├── cloudE-config-server -- 分布式配置中心
 ├── cloudE-config-repo -- 配置文件
+├── cloudE-admin-server -- 服务监控
+├── cloudE-mapper -- mybatis生成模块
+├── cloudE-zipkin-server -- 链路追踪
 
