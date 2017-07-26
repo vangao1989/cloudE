@@ -12,5 +12,51 @@ cloudE
 ├── cloudE-config-repo -- 配置文件
 ├── cloudE-admin-server -- 服务监控
 ├── cloudE-mapper -- mybatis生成模块
-├── cloudE-zipkin-server -- 链路追踪
+├── cloudE-gateway-server -- zuul网关
+├── cloudE-hystrix-dashboard-server -- hystrix仪表盘
+├── cloudE-turbine-server -- hystrix仪表盘聚合服务
+├── cloudE-pay-api -- 支付服务api，提供feign接口
+├── cloudE-pay-provider -- 支付服务
+├── cloudE-ucenter-provider -- 用户中心
+├── cloudE-common 公共模块、工具类等
+```
+
+### 技术选型
+
+技术 | 说明 | 官网
+----|------|----
+Spring cloud eureka | 云端服务发现，一个基于 REST 的服务，用于定位服务，以实现云端中间层服务发现和故障转移。 | [https://projects.spring.io/spring-cloud/](https://projects.spring.io/spring-cloud/)
+Spring cloud config server | 让你可以把配置放到远程服务器，集中化管理集群配置，目前支持本地存储、Git以及Subversion  | [https://projects.spring.io/spring-cloud/](https://projects.spring.io/spring-cloud/)
+Spring cloud zuul | Zuul 是在云平台上提供动态路由,监控,弹性,安全等边缘服务的框架  | [https://projects.spring.io/spring-cloud/](https://projects.spring.io/spring-cloud/)
+Spring Cloud Sleuth | 日志收集工具包，封装了Dapper和log-based追踪以及Zipkin和HTrace操作，为SpringCloud应用实现了一种分布式追踪解决方案。 | [https://projects.spring.io/spring-cloud/](https://projects.spring.io/spring-cloud/)
+Spring boot admin | 服务监控  | [http://projects.spring.io/spring-boot/](http://projects.spring.io/spring-boot/)
+Hystrix | 熔断器，容错管理工具，旨在通过熔断机制控制服务和第三方库的节点,从而对延迟和故障提供更强大的容错能力。 | 
+Hystrix-dashboard | hystrix 仪表盘 
+Turbine | 聚合服务器发送事件流数据的工具，用来监控集群下hystrix的metrics情况。
+Feign | 一种声明式、模板化的HTTP客户端。
+MyBatis Generator | 代码生成  | [http://www.mybatis.org/generator/index.html](http://www.mybatis.org/generator/index.html)
+Redis | 分布式缓存数据库  | [https://redis.io/](https://redis.io/)
+Log4J | 日志组件  | [http://logging.apache.org/log4j/1.2/](http://logging.apache.org/log4j/1.2/)
+Swagger2 | 接口测试框架  | [http://swagger.io/](http://swagger.io/)
+Maven | 项目构建管理  | [http://maven.apache.org/](http://maven.apache.org/)
+
+#### 模块介绍
+
+> cloudE-common
+
+包含了公共模块，以及工具类等。
+
+> cloudE-pay-api
+
+支付服务api包，以feign的形式暴露支付接口
+
+> cloudE-pay-provider
+
+提供支付服务
+
+> cloudE-ucenter-provider
+
+用户中心，通过feign调用支付服务
+
+
 
