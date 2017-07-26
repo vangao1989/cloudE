@@ -1,0 +1,15 @@
+spring:
+  application:
+      name: cloudE-hystrix-dashboard-server
+  cloud:
+      config:
+          uri: http://localhost:8888
+
+eureka:
+  instance:
+    prefer-ip-address: true
+
+server:
+  port: 8022
+
+
