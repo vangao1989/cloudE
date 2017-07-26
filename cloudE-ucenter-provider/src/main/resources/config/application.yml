@@ -1,0 +1,13 @@
+server:
+  port: 8082
+
+spring:
+  application:
+    name: cloudE-user-server
+  cloud:
+    config:
+      uri: http://localhost:8888
+
+mybatis:
+  mapperLocations: classpath:mapper/*.xml
+  typeAliasesPackage: com.cloudE.mapper
