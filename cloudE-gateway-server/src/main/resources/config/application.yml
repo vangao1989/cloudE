@@ -1,0 +1,41 @@
+spring:
+  application:
+      name: cloudE-gateway-server
+  cloud:
+      config:
+          uri: http://localhost:8888
+
+eureka:
+  instance:
+    prefer-ip-address: true
+
+server:
+  port: 5555
+
+
+ribbon:
+  #  # Max number of next servers to retry (excluding the first server)
+  #  MaxAutoRetries: 1
+  #  # Whether all operations can be retried for this client
+  #  MaxAutoRetriesNextServer: 1
+  #  # Interval to refresh the server list from the source
+  #  OkToRetryOnAllOperations: true
+  #  # Interval to refresh the server list from the source
+  #  ServerListRefreshInterval: 2000
+  #  # Connect timeout used by Apache HttpClient
+    ConnectTimeout: 20000
+  #  # Read timeout used by Apache HttpClient
+    ReadTimeout: 20000
+
+hystrix:
+    command:
+        default:
+            execution:
+                isolation:
+                    thread:
+                        timeoutInMilliseconds: 10000
+zuul:
+    routes:
+        ucenter:
+            path: /ucenter/**
+            serviceId: cloudE-ucenter-provider
