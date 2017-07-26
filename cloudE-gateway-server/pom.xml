@@ -7,7 +7,7 @@
 	<version>1.0.0</version>
 	<packaging>jar</packaging>
 
-	<name>cloudE-gateway-server</name>
+	<name>cloude-gateway-server</name>
 
 	<parent>
 		<groupId>com.cloudE</groupId>

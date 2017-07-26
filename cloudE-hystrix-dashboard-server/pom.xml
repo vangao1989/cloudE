@@ -5,7 +5,7 @@
 	<groupId>com.cloudE</groupId>
 	<artifactId>cloudE-hystrix-dashboard-server</artifactId>
 	<version>1.0.0</version>
-	<name>cloudE-hystrix-dashboard-server</name>
+	<name>cloude-hystrix-dashboard-server</name>
 	<packaging>jar</packaging>
 	<parent>
 		<groupId>com.cloudE</groupId>

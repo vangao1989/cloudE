@@ -5,7 +5,7 @@
 	<groupId>cloud</groupId>
 	<artifactId>cloudE-pay-provider</artifactId>
 	<version>1.0.0</version>
-	<name>cloudE-pay-provider</name>
+	<name>cloude-pay-provider</name>
 
 	<parent>
 		<groupId>com.cloudE</groupId>

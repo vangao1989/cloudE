@@ -8,7 +8,7 @@
 	<version>1.0.0</version>
 	<packaging>jar</packaging>
 
-	<name>cloudE-config-serve</name>
+	<name>cloude-config-serve</name>
 
 	<parent>
 		<groupId>com.cloudE</groupId>

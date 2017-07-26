@@ -5,7 +5,7 @@
     <groupId>com.cloudE</groupId>
     <artifactId>cloudE-ucenter-provider</artifactId>
     <version>1.0.0</version>
-    <name>cloudE-ucenter-provider</name>
+    <name>cloude-ucenter-provider</name>
 
     <parent>
         <groupId>com.cloudE</groupId>

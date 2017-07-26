@@ -6,7 +6,7 @@
 	<groupId>com.cloudE</groupId>
 	<artifactId>cloudE-admin-server</artifactId>
 	<version>1.0.0</version>
-	<name>cloudE-admin-server</name>
+	<name>cloude-admin-server</name>
 	<packaging>jar</packaging>
 
 	<parent>

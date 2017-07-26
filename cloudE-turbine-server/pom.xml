@@ -7,7 +7,7 @@
 	<version>1.0.0</version>
 	<packaging>jar</packaging>
 
-	<name>cloudE-turbine-server</name>
+	<name>cloude-turbine-server</name>
 
 	<parent>
 		<groupId>com.cloudE</groupId>
