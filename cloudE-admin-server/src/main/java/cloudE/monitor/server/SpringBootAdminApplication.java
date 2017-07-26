@@ -8,7 +8,7 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 
 /**
  * @author vangao1989
- * @Description: spring cloud admin
+ * @Description: 服务监控
  * @date 2017年7月24日
  */
 @SpringBootApplication

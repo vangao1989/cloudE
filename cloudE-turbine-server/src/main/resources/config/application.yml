@@ -1,6 +1,6 @@
 spring:
   application:
-      name: cloudE-hystrix-dashboard-server
+      name: cloudE-turbine-server
   cloud:
       config:
           uri: http://localhost:8888
@@ -10,6 +10,6 @@ eureka:
     prefer-ip-address: true
 
 server:
-  port: 8022
+  port: 8031
 
 

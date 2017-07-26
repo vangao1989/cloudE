@@ -18,9 +18,9 @@
 		<java.version>1.8</java.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
-		<cloudE-mapper-version>0.0.6</cloudE-mapper-version>
-		<cloudE-core-version>0.1.3</cloudE-core-version>
-		<cloudE-channel-api-version>0.0.4</cloudE-channel-api-version>
+		<cloudE-mapper-version>1.0.0</cloudE-mapper-version>
+		<cloudE-common-version>1.0.0</cloudE-common-version>
+		<cloudE-pay-api-version>1.0.0</cloudE-pay-api-version>
 
 		<docker.image.prefix>vangao1989</docker.image.prefix>
 	</properties>
@@ -29,7 +29,7 @@
 
 
 	<modules>
-		<module>cloudE-core</module>
+		<module>cloudE-common</module>
 		<module>cloudE-mapper</module>
 		<module>cloudE-eureka-server</module>
 		<module>cloudE-admin-server</module>
@@ -38,25 +38,10 @@
 		<module>cloudE-zipkin-server</module>
 		<module>cloudE-gateway-server</module>
 		<module>cloudE-turbine-server</module>
-		<module>cloudE-channelDocking-provider</module>
-		<module>cloudE-user-provider</module>
-		<module>cloudE-channelDocking-api</module>
+		<module>cloudE-pay-api</module>
+		<module>cloudE-pay-provider</module>
+		<module>cloudE-ucenter-provider</module>
  	 </modules>
-
-
-
-	<distributionManagement>  
-        <repository>  
-            <id>nexus-releases</id>  
-            <name>maimaijiao</name>  
-            <url>http://192.168.1.99:8081/nexus/content/repositories/mmj</url>  
-        </repository>  
-   		<snapshotRepository>   
-            <id>nexus-snapshots</id>   
-            <name>Snapshots</name>   
-            <url>http://192.168.1.99:8081/nexus/content/repositories/snapshots</url>   
-        </snapshotRepository>
-    </distributionManagement>
 
 	<dependencyManagement>
 		<dependencies>

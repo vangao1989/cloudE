@@ -3,7 +3,7 @@ server:
 
 spring:
   application:
-    name: cloud-config-server
+    name: cloudE-config-server
   cloud:
       config:
         server:
@@ -13,6 +13,8 @@ spring:
             lable: master
 
 eureka:
+  instance:
+    prefer-ip-address: true
   client:
     serviceUrl:
       defaultZone: http://localhost:8761/eureka/

@@ -6,6 +6,11 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.cloud.netflix.turbine.EnableTurbine;
 
 
+/**
+ * @author vangao1989
+ * @Description: hystrix dashboard 聚合
+ * @date 2017年7月26日
+ */
 @SpringBootApplication
 @EnableTurbine
 @EnableEurekaClient

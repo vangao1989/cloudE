@@ -1,6 +1,6 @@
 spring:
   application:
-      name: cloudE-admin-server
+      name: cloudE-zipkin-server
   cloud:
       config:
           uri: http://localhost:8888
@@ -10,6 +10,6 @@ eureka:
     prefer-ip-address: true
 
 server:
-  port: 8050
+  port: 9411
 
 
