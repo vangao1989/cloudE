@@ -1,0 +1,17 @@
+spring:
+  application:
+      name: cloudE-pay-provider
+  cloud:
+      config:
+          uri: http://localhost:8888
+
+eureka:
+  instance:
+    prefer-ip-address: true
+
+server:
+  port: 8081
+
+mybatis:
+  mapperLocations: classpath:mapper/*.xml
+  typeAliasesPackage: com.cloudE.mapper
