@@ -40,7 +40,7 @@ Log4J | 日志组件  | [http://logging.apache.org/log4j/1.2/](http://logging.ap
 Swagger2 | 接口测试框架  | [http://swagger.io/](http://swagger.io/)
 Maven | 项目构建管理  | [http://maven.apache.org/](http://maven.apache.org/)
 
-#### 模块介绍
+### 模块介绍
 
 > cloudE-common
 
@@ -58,5 +58,32 @@ Maven | 项目构建管理  | [http://maven.apache.org/](http://maven.apache.org
 
 用户中心，通过feign调用支付服务
 
+
+### 环境搭建
+
+> 开发环境
+
+- 1、本机安装Jdk8、Mysql并**启动相关服务**，使用默认配置默认端口即可
+- 2、克隆源代码到本地并打开，**推荐使用IntelliJ IDEA**
+
+> 准备工作
+
+- 创建数据库，导入cloudE-mapper项目中的create.sql
+
+- 修改cloudE-config-repo中对应的配置信息（mysql）
+
+> 启动服务
+
+- 启动服务有三种方式：
+
+- 1、执行spring boot main方法
+
+- 2、执行maven打包命令 mvn clean install -Dmaven.test.skip=true ,jar包会被打到target目录下，进入该目录，执行 java -jar cloudE-xxxxx-xxxx.jar --spring.profiles.active=dev
+
+- 3、构建docker镜像（mvn package docker:build），然后执行docker run xxxxx/xxxxx
+
+> 启动顺序
+
+- 优先启动cloudE-eureka-server,cloudE-config-server。其他服务顺序随意
 
 
