@@ -39,6 +39,7 @@ Redis | 分布式缓存数据库  | [https://redis.io/](https://redis.io/)
 Log4J | 日志组件  | [http://logging.apache.org/log4j/1.2/](http://logging.apache.org/log4j/1.2/)
 Swagger2 | 接口测试框架  | [http://swagger.io/](http://swagger.io/)
 Maven | 项目构建管理  | [http://maven.apache.org/](http://maven.apache.org/)
+prometheus | 时间序列数据库 | [https://prometheus.io/](https://prometheus.io/)
 
 ### 模块介绍
 
@@ -85,5 +86,19 @@ Maven | 项目构建管理  | [http://maven.apache.org/](http://maven.apache.org
 > 启动顺序
 
 - 优先启动cloudE-eureka-server,cloudE-config-server。其他服务顺序随意
+
+
+### 服务监控
+
+>  通过prometheus client暴露Metrics到/prometheus。然后通过简单的配置Prometheus，就可以采集到监控数据。还可以使用Grafana，更好的展示监控数据。
+  
+  下面放上两张监控的效果图：
+- 1、prometheus
+![prometheus](project-bootstrap/prometheus.png)
+- 2、grafana
+![grafana](project-bootstrap/grafana.png)
+
+
+    
 
 
