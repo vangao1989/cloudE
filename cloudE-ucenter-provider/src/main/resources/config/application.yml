@@ -11,3 +11,7 @@ spring:
 mybatis:
   mapperLocations: classpath:mapper/*.xml
   typeAliasesPackage: com.cloudE.mapper
+
+eureka:
+  instance:
+    prefer-ip-address: true

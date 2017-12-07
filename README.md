@@ -99,6 +99,21 @@ prometheus | 时间序列数据库 | [https://prometheus.io/](https://prometheus
 ![grafana](project-bootstrap/grafana.png)
 
 
+### 动态参数注入
+
+>  有时候业务上需要用到可以热修改的参数，可以通过@RefreshScope注解，和spring boot admin来实现
+    
+   例子在cloudE-ucenter-provider中。实现如下：
+- 1.在启动类上加上@RefreshScope注解
+- 2.类中注入参数(参数配在properites中)
+![ucenterTask](project-bootstrap/ucenterTask.png)
+- 3.spring boot admin修改对应参数，即可实时生效
+![spring-boot-admin](project-bootstrap/spring-boot-admin.png)
+
+
+
+
+
     
 
 
