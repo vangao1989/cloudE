@@ -97,6 +97,12 @@ prometheus | 时间序列数据库 | [https://prometheus.io/](https://prometheus
 ![prometheus](project-bootstrap/prometheus.png)
 - 2、grafana
 ![grafana](project-bootstrap/grafana.png)
+  
+  另外，通过spring cloud生态内的hystrix dashboard,以及zipkin（链路监控），也可以很好的监控服务，排查问题
+- 1、hystrix dashboard
+![hystrix](project-bootstrap/hystrix.png)
+- 2、zipkin
+![zipkin1](project-bootstrap/zipkin1.png) 
 
 
 ### 动态参数注入
