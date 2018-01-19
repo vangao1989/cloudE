@@ -30,7 +30,7 @@ public class ApplePayProvider {
     @HystrixCommand(fallbackMethod = "rechargeFallBack", commandProperties = {
             @HystrixProperty(name = "execution.isolation.thread.timeoutInMilliseconds", value = "5000")})
     @PostMapping(value = "apple/recharge")
-    public BaseResult<Boolean> recharge(@RequestParam("userId") Long userId, @RequestParam("amount") Double amount) throws Exception {
+    public BaseResult<Boolean> applePayRecharge(@RequestParam("userId") Long userId, @RequestParam("amount") Double amount) throws Exception {
         log.info("apple recharge {}", amount);
         redisService.set("apple_recharge_" + userId, amount.toString(), 3600);
         return new BaseResult<>(true);

@@ -3,7 +3,7 @@ server:
 
 spring:
   application:
-    name: cloudE-user-server
+    name: cloudE-ucenter-provider
   cloud:
     config:
       uri: http://localhost:8888

@@ -31,7 +31,7 @@ public class RedisConfig extends CachingConfigurerSupport {
     private static final Logger LOGGER = LoggerFactory.getLogger(RedisConfig.class);
 
 
-    @Value("${redis.defaultExpirationTime}")
+//    @Value("${redis.defaultExpirationTime}")
     private String defaultExpirationTime = "600";
 
 

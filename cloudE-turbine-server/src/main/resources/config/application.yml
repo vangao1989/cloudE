@@ -11,5 +11,12 @@ eureka:
 
 server:
   port: 8031
+turbine:
+  app-config: cloudE-ucenter-provider,cloudE-pay-provider
+  aggregator:
+    cluster-config: default
+  cluster-name-expression: new String("default")
+
+
 
 

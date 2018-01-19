@@ -76,8 +76,9 @@
 		<!-- Spring Boot Redis 依赖 -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-redis</artifactId>
+			<artifactId>spring-boot-starter-data-redis</artifactId>
 		</dependency>
+
 		<!--swagger2的依赖-->
 		<dependency>
 			<groupId>io.springfox</groupId>
