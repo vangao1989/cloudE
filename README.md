@@ -11,13 +11,14 @@ cloudE
 ├── cloudE-config-server -- 分布式配置中心
 ├── cloudE-config-repo -- 配置文件
 ├── cloudE-admin-server -- 服务监控
-├── cloudE-mapper -- mybatis生成模块
 ├── cloudE-gateway-server -- zuul网关
 ├── cloudE-hystrix-dashboard-server -- hystrix仪表盘
 ├── cloudE-turbine-server -- hystrix仪表盘聚合服务
+├── cloudE-zipkin-server -- 链路监控
 ├── cloudE-pay-api -- 支付服务api，提供feign接口
 ├── cloudE-pay-provider -- 支付服务
 ├── cloudE-ucenter-provider -- 用户中心
+├── cloudE-mapper -- mybatis生成模块
 ├── cloudE-common 公共模块、工具类等
 ```
 
@@ -32,6 +33,7 @@ Spring Cloud Sleuth | 日志收集工具包，封装了Dapper和log-based追踪�
 Spring boot admin | 服务监控  | [http://projects.spring.io/spring-boot/](http://projects.spring.io/spring-boot/)
 Hystrix | 熔断器，容错管理工具，旨在通过熔断机制控制服务和第三方库的节点,从而对延迟和故障提供更强大的容错能力。 | 
 Hystrix-dashboard | hystrix 仪表盘 
+zipkin | 分布式链路调用监控系统，聚合各业务系统调用延迟数据，达到链路调用监控跟踪。 |
 Turbine | 聚合服务器发送事件流数据的工具，用来监控集群下hystrix的metrics情况。
 Feign | 一种声明式、模板化的HTTP客户端。
 MyBatis Generator | 代码生成  | [http://www.mybatis.org/generator/index.html](http://www.mybatis.org/generator/index.html)
