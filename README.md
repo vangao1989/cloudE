@@ -73,7 +73,7 @@ prometheus | 时间序列数据库 | [https://prometheus.io/](https://prometheus
 
 - 创建数据库，导入cloudE-mapper项目中的create.sql
 
-- 修改cloudE-config-repo中对应的配置信息（mysql）
+- 修改cloudE-config-server中对应的配置信息（properties）
 
 > 启动服务
 
