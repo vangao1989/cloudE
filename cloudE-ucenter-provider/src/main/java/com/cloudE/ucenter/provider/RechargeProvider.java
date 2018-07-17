@@ -6,12 +6,10 @@ import com.cloudE.entity.User;
 import com.cloudE.pay.client.ApplePayClient;
 import com.cloudE.ucenter.manager.UserManager;
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
+import io.swagger.annotations.ApiParam;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
 
@@ -32,9 +30,9 @@ public class RechargeProvider {
 
     @HystrixCommand(fallbackMethod = "rechargeFallback")
     @RequestMapping(value = "/recharge", method = RequestMethod.POST)
-    public BaseResult<Boolean> recharge(@RequestParam(value = "userId") Long userId,
-                                        @RequestParam(value = "amount") Double amount,
-                                        @RequestParam(value = "type") String type) {
+    public BaseResult<Boolean> recharge(@RequestParam @ApiParam(name = "userId",value = "用户名") Long userId,
+                                        @RequestParam @ApiParam(name = "amount",value = "金额") Double amount,
+                                        @RequestParam @ApiParam(name = "type",value = "充值方式：1.支付宝|2.微信支付") String type) {
         User user = userManager.getUserByUserId(userId);
         LOGGER.info("user {} recharge {},type:{}", user.getUsername(), amount, type);
         BaseResult<Boolean> baseResult = applePayClient.recharge(userId, amount);
